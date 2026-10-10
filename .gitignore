@@ -2,6 +2,9 @@
 .gitignore
 node_modules
 public
+# 宿主 monorepo 的 build 脚本用 `quartz build -o dist`，产物落在这里。
+# 上游只忽略了 public（默认输出目录），dist 是宿主适配时才用到的。
+dist
 prof
 tsconfig.tsbuildinfo
 .obsidian
