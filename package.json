@@ -13,8 +13,8 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "build": "pnpm run install-plugins && ./quartz/bootstrap-cli.mjs build -o dist -d docs",
-    "dev": "./quartz/bootstrap-cli.mjs build --serve -d docs",
+    "build": "pnpm run install-plugins && ./quartz/bootstrap-cli.mjs build -o dist -d ../lyric-book",
+    "dev": "./quartz/bootstrap-cli.mjs build --serve -d ../lyric-book",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test",
     "format": "prettier . --write",
