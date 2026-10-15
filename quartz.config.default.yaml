@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: 歌词库
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  locale: zh-CN
+  baseUrl: music-gallery-6so.pages.dev
   ignorePatterns:
     - private
     - templates
@@ -228,7 +228,13 @@ plugins:
     options:
       includeAll: false
       includedProperties:
+        - title
+        - artist
+        - album
         - description
+        - year
+        - track
+        - duration
         - tags
         - aliases
       excludedProperties: []
