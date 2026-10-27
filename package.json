@@ -1,5 +1,5 @@
 {
-  "name": "@jackyzha0/quartz",
+  "name": "@musicgallery/quartz",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "5.0.0",
@@ -13,8 +13,11 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
+    "build": "pnpm run install-plugins && node ./quartz/bootstrap-cli.mjs build -d ../lyric-book",
+    "dev": "node ./quartz/bootstrap-cli.mjs build --serve -d ../lyric-book",
     "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
+    "typecheck": "tsc --noEmit",
     "format": "npx prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
@@ -121,6 +124,7 @@
     "@quartz-community/types": "^1.0.0",
     "@quartz-community/utils": "^1.0.1",
     "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
     "@types/node": "^26.5.1",
     "@types/pretty-time": "^1.1.5",
     "@types/source-map-support": "^0.5.10",
